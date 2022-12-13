@@ -82,7 +82,32 @@ class MainActivity : AppCompatActivity() {
                         .replace(R.id.dataContainer,
                             SettingsFragment()
                         ).commit()
+
                 }
+                    when (position) {
+                        1 -> supportFragmentManager.beginTransaction()
+                            .addToBackStack(null)
+                            .replace(
+                                R.id.dataContainer,
+                                ChatsFragment()
+                            ).commit()
+                    }
+                    when (position) {
+                        3 -> supportFragmentManager.beginTransaction()
+                            .addToBackStack(null)
+                            .replace(
+                                R.id.dataContainer,
+                                ContactFragment()
+                            ).commit()
+                    }
+                    when (position) {
+                        2 -> supportFragmentManager.beginTransaction()
+                            .addToBackStack(null)
+                            .replace(
+                                R.id.dataContainer,
+                                GroupFragment()
+                            ).commit()
+                    }
                 return false
             }
     }).build()
