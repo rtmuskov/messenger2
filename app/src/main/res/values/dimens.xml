@@ -6,6 +6,9 @@
     <dimen name="vertical_margin">10dp</dimen>
     <dimen name="smallText">14sp</dimen>
     <dimen name="vertical_large_margin">16dp</dimen>
+    <dimen name="appPadding">10dp</dimen>
+    <dimen name="bottom_sheet_height">70dp</dimen>
+    <dimen name="btn_bottom_sheet_width">50dp</dimen>
 
     <!--Settings fragment-->
     <dimen name="settings_user_photo_width">55dp</dimen>

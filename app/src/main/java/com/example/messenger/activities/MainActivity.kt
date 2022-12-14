@@ -7,14 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.messenger.R
 import com.example.messenger.databinding.ActivityMainBinding
+import com.example.messenger.fragments.*
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
-import com.example.messenger.fragments.ChatsFragment
-import com.example.messenger.fragments.ContactFragment
-import com.example.messenger.fragments.GroupFragment
-import com.example.messenger.fragments.SettingsFragment
-import com.example.messenger.settings
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
@@ -94,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                             .addToBackStack(null)
                             .replace(
                                 R.id.dataContainer,
-                                ChatsFragment()
+                                Chats1Fragment()
                             ).commit()
                     }
                     when (position) {
@@ -136,8 +132,5 @@ class MainActivity : AppCompatActivity() {
         mToolbar = mBinding.mainToolbar
     }
 
-    fun onClickGoSettings(view: View) {
-        val intent = Intent(this, settings::class.java)
-        startActivity(intent)
-    }
+
 }
