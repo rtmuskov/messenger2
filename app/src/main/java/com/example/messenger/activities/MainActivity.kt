@@ -1,16 +1,20 @@
-package com.example.messenger
+package com.example.messenger.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.messenger.R
 import com.example.messenger.databinding.ActivityMainBinding
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
-import com.example.messenger.SettingsFragment
+import com.example.messenger.fragments.ChatsFragment
+import com.example.messenger.fragments.ContactFragment
+import com.example.messenger.fragments.GroupFragment
+import com.example.messenger.fragments.SettingsFragment
+import com.example.messenger.settings
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
@@ -79,7 +83,8 @@ class MainActivity : AppCompatActivity() {
                     when (position) {
                     4 ->  supportFragmentManager.beginTransaction()
                     .addToBackStack(null)
-                        .replace(R.id.dataContainer,
+                        .replace(
+                            R.id.dataContainer,
                             SettingsFragment()
                         ).commit()
 

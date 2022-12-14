@@ -1,4 +1,4 @@
-package com.example.messenger
+package com.example.messenger.fragments
 
 import com.example.messenger.R
 
